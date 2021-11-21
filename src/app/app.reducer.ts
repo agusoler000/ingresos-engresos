@@ -7,7 +7,7 @@ import * as ingresoegreso from './ingreso-egreso/ingres-egreso.reducer';
 export interface AppState {
    ui: ui.State
    user: auth.State,
-   ingresosegresos: ingresoegreso.State
+   //ingresosegresos: ingresoegreso.State
 }
 
 
@@ -15,5 +15,5 @@ export interface AppState {
 export const appReducers: ActionReducerMap<AppState> = {
    ui: ui.uiReducer,
    user: auth.authReducer,
-   ingresosegresos: ingresoegreso.ingresoEgresoReducer
+  // ingresosegresos: ingresoegreso.ingresoEgresoReducer
 }
