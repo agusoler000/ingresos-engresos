@@ -36,8 +36,12 @@
 
 
                         <div class="form-group">
-                            <button type="submit" [disabled]="loginForm.invalid"
+                            <button *ngIf="!cargando" type="submit" [disabled]="loginForm.invalid"
                                 class="btn btn-primary submit-btn btn-block">Login</button>
+
+                            <button *ngIf="cargando" type="button" [disabled]="true"
+                                class="btn btn-primary submit-btn btn-block">Loading...
+                                <i class="fa fa-spin fa-sync"></i></button>
                         </div>
 
 

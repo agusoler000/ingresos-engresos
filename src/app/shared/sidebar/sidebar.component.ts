@@ -29,12 +29,12 @@ export class SidebarComponent implements OnInit {
 
     this.authService.logOut()
     .then( ()=> {
-      setTimeout(() => {
+      
         Swal.close()
         
         this.router.navigate(['/login'])
         
-      }, 1500);
+    
     })
   }
 
