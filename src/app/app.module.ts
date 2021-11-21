@@ -10,6 +10,9 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import {StoreModule} from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
+//Charts
+
+import { ChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +28,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms'
 import { appReducers } from './app.reducer';
+import { OrdenaringresosPipe } from './pipes/ordenaringresos.pipe';
 
 @NgModule({
   declarations: [
@@ -37,12 +41,14 @@ import { appReducers } from './app.reducer';
     DetalleComponent,
     FooterComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    OrdenaringresosPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    ChartsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
